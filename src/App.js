@@ -12,9 +12,9 @@ function App() {
 useEffect(() => {
   async function getAnimals() {
     try {
-      const animals = await fetch('https://bmrx.herokuapp.com/animals')
+      const animals = await fetch('https://stormy-falls-16916.herokuapp.com/animals')
       .then(response => response.json())
-      console.log(animals)
+      setAnimalsState({animals})
     } catch (error) {
       console.log(error)
     }
