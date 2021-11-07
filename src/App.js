@@ -1,35 +1,15 @@
-import { useState, useEffect } from 'react';
 import './App.css';
-// Import components //
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from './components/Footer';
+import Header from "./components/Header.js";
+import Main from "./components/Main.js";
+import Footer from "./components/Footer.js";
+import Sub from './components/Sub';
 
 function App() {
-  const [animalsState, setAnimalsState] = useState({ animals: [] });
-
-
-useEffect(() => {
-  async function getAnimals() {
-    try {
-      const animals = await fetch('https://stormy-falls-16916.herokuapp.com/animals')
-      .then(response => response.json())
-      setAnimalsState({animals})
-    } catch (error) {
-      console.log(error)
-    }
-  }
- getAnimals();
-}, []);
-
-
-
-
-
   return (
     <div className="App">
       <Header />
-      <Main animals={ animalsState.animals } />
+      <Sub />
+      <Main />
       <Footer />
     </div>
   );
