@@ -1,5 +1,5 @@
-function Header(props){
-  return <h1>Component Name</h1>;
+function Header(){
+  return <h1>WildSite</h1>;
 } 
 
 export default Header;
