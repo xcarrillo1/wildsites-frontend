@@ -26,6 +26,14 @@ function Form(props) {
       <form onSubmit={handleSubmit}>
         <Input
           handleChange={handleChange}
+          name="image"
+          placeholder="Image"
+          type="text"
+          value={formState.image}
+          id="image"
+         />
+        <Input
+          handleChange={handleChange}
           name="name"
           placeholder="Animal Name"
           type="text"
@@ -38,7 +46,7 @@ function Form(props) {
            placeholder="Action"
            type="text"
            value={formState.action}
-           id="author"
+           id="action"
         />
         <Input
           handleChange={handleChange}
@@ -46,9 +54,25 @@ function Form(props) {
           placeholder="Diet"
           type="text"
           value={formState.diet}
-          id="phone"
-       />
-       <input type="submit" value="add an entry"/>
+          id="diet"
+        />
+        <Input
+          handleChange={handleChange}
+          name="temperament"
+          placeholder="Temperament"
+          type="text"
+          value={formState.temp}
+          id="temp"
+        />
+        <Input
+          handleChange={handleChange}
+          name="location"
+          placeholder="Location"
+          type="text"
+          value={formState.location}
+          id="location"
+         />
+       <input type="submit" value="Add Entry"/>
       </form>
     );
   }
