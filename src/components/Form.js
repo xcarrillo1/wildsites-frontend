@@ -58,7 +58,7 @@ function Form(props) {
         />
         <Input
           handleChange={handleChange}
-          name="temperament"
+          name="temp"
           placeholder="Temperament"
           type="text"
           value={formState.temp}

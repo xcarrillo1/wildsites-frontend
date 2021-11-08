@@ -1,7 +1,7 @@
 import react from "react";
 import { useState } from "react";
 
-function Main({ animals }) {
+function Main({ animals, handleDelete }) {
   
   return (
     <div>

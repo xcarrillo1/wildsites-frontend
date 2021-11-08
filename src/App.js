@@ -47,7 +47,19 @@ function App() {
         console.log(error);
       }
     }
-
+  
+    async function handleDelete(animalId) {
+      try {
+        const animals = await fetch(`https://stormy-falls-16916.herokuapp.com/animals/${animalId}`, {
+          method: 'DELETE',
+        }).then(res => res.json());
+      
+      setAnimals({ animals });
+  
+      } catch (error) {
+        console.log(error)
+      }
+    }
 
   return (
     <div className="App">
@@ -55,7 +67,8 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-          <Main animals={animals.animals} />
+            <Main animals={animals.animals}
+              handleDelete={handleDelete} />
           </Route>
           <Route path="/animals/:id">
           <Show />
