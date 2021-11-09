@@ -14,6 +14,8 @@
   font-family: "Rubik", sans-serif;
 }
 
+
+
 .main-animals {
   display: flex;
   flex-direction: row;
@@ -22,12 +24,26 @@
   justify-content: space-around;
 }
 
-
 img {
   border-radius: 25px;
   width: 200px;
   height: 200px;
   margin: 10px;
+  opacity:0.5;
+  transition: 1s ease;
+}
+
+img:hover {
+  opacity:1;
+  transition: 1s ease;
+}
+
+/* Show Page */
+.animalShow {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
 /* Creating a new Animal */
@@ -74,4 +90,3 @@ img {
   color: white;
   font-family: "Poppins", sans-serif;
 }
-
