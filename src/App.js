@@ -68,7 +68,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Main animals={animals.animals}
-              handleDelete={handleDelete} />
+              handleDelete={handleDelete} key={animals.i} />
           </Route>
           <Route path="/animals/:id"
             render={(rp) => (
