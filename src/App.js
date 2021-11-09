@@ -13,7 +13,7 @@ import Show from "./pages/Show";
 function App() {
   const [animals, setAnimals] = useState({ animals: [] });
 
-  // useEffect gets called every time component renders
+  // useEffect gets called every time a component renders
   useEffect(() => {
     async function getAnimals() {
       try {
@@ -70,9 +70,14 @@ function App() {
             <Main animals={animals.animals}
               handleDelete={handleDelete} />
           </Route>
-          <Route path="/animals/:id">
-          <Show />
-          </Route>
+          <Route path="/animals/:id"
+            render={(rp) => (
+              <Show
+                animals={animals.animals}
+                {...rp}
+              />
+            )}
+          />
           <Route path="/animals/">
           <Form handleAdd={handleAdd} />
           </Route>
