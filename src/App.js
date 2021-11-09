@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Form from "./components/Form";
 // Import pages //
-import Index from "./pages/Index";
+// import Index from "./pages/Index";
 import Show from "./pages/Show";
 
 // API call function for animals
@@ -68,7 +68,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Main animals={animals.animals}
-              handleDelete={handleDelete} key={animals.i} />
+              handleDelete={handleDelete} />
           </Route>
           <Route path="/animals/:id"
             render={(rp) => (

@@ -18,7 +18,6 @@ function Main({ animals, handleDelete }) {
               <Link to={`/animals/${animal.id}`}>
             <img src={animal.image} />
               </Link>
-              <button onClick={() => handleDelete(animals.id)} >X</button>
           </div>
           )
         })
@@ -30,8 +29,3 @@ function Main({ animals, handleDelete }) {
 export default Main
 // I want to wrap a link tag around each photo so that it's a clickalble link
 // That link should direct me to a show page based on that photo's id
-//{animals.map((animal) =>
-// animals.id === "4"
-// ? (animal)
-// : null
-// )}
