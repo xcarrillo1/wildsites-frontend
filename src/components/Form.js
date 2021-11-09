@@ -23,57 +23,59 @@ function Form(props) {
     props.handleAdd(formState);
   }
     return (
-      <form onSubmit={handleSubmit}>
-        <Input
-          handleChange={handleChange}
-          name="image"
-          placeholder="Image"
-          type="text"
-          value={formState.image}
-          id="image"
-         />
-        <Input
-          handleChange={handleChange}
-          name="name"
-          placeholder="Animal Name"
-          type="text"
-          value={formState.name}
-          id="animalName"
-         />
-         <Input
-           handleChange={handleChange}
-           name="action"
-           placeholder="Action"
-           type="text"
-           value={formState.action}
-           id="action"
-        />
-        <Input
-          handleChange={handleChange}
-          name="diet"
-          placeholder="Diet"
-          type="text"
-          value={formState.diet}
-          id="diet"
-        />
-        <Input
-          handleChange={handleChange}
-          name="temp"
-          placeholder="Temperament"
-          type="text"
-          value={formState.temp}
-          id="temp"
-        />
-        <Input
-          handleChange={handleChange}
-          name="location"
-          placeholder="Location"
-          type="text"
-          value={formState.location}
-          id="location"
-         />
-       <input type="submit" value="Add Entry"/>
-      </form>
+      <section className="container-new">
+        <form onSubmit={handleSubmit}>
+          <Input
+            handleChange={handleChange}
+            name="image"
+            placeholder="Image"
+            type="text"
+            value={formState.image}
+            id="image"
+          />
+          <Input
+            handleChange={handleChange}
+            name="name"
+            placeholder="Animal Name"
+            type="text"
+            value={formState.name}
+            id="animalName"
+          />
+          <Input
+            handleChange={handleChange}
+            name="action"
+            placeholder="What should I do?"
+            type="text"
+            value={formState.action}
+            id="action"
+          />
+          <Input
+            handleChange={handleChange}
+            name="diet"
+            placeholder="Diet"
+            type="text"
+            value={formState.diet}
+            id="diet"
+          />
+          <Input
+            handleChange={handleChange}
+            name="temp"
+            placeholder="Temperament"
+            type="text"
+            value={formState.temp}
+            id="temp"
+          />
+          <Input
+            handleChange={handleChange}
+            name="location"
+            placeholder="Location"
+            type="text"
+            value={formState.location}
+            id="location"
+          />
+        <input className="create" type="submit" value="Add Entry"/>
+        </form>
+      </section>
     );
   }
 
