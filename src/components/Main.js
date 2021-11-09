@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Main({ animals, handleDelete }) {
   
   return (
-    <div>
+    <div className="main-animals">
       {/*If animal is defined, display the animals  */}
       {animals && 
         animals.map((animal) => {
