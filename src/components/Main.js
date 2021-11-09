@@ -6,6 +6,9 @@ function Main({ animals, handleDelete }) {
   
   return (
     <div className="main-animals">
+      <Link to="/animals">
+        <div>Create New Animal</div>
+      </Link>
       {/*If animal is defined, display the animals  */}
       {animals && 
         animals.map((animal) => {
@@ -15,6 +18,7 @@ function Main({ animals, handleDelete }) {
               <Link to={`/animals/${animal.id}`}>
             <img src={animal.image} />
               </Link>
+              <button onClick={() => handleDelete(animals.id)} >X</button>
           </div>
           )
         })

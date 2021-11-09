@@ -1,19 +1,28 @@
 import react from "react";
 import { useState } from "react";
 
-function Show({ animals }) {
+function Show(props) {
+  const id = props.match.params.id
+  const animals = props.animals
+  const animalX = animals.filter(p => p.id == id)[0]
+  console.log(animalX)
   return (
-    <div>
-      {animals.map((animal) => {
-          return (
-          <div>
-            <h1></h1>
-            <img src={animal.image} />
-          </div>
-          )
-        })
-      }
-    </div>
+  <div className="person">
+  <h1>{animalX.name}</h1>
+  <h2>{animalX.diet}</h2>
+  <img src={animalX.image} alt={animalX.name} />
+  </div>
+//     <div>
+//       {/* {animals.map((animal) => {
+//           return (
+//           <div>
+//             <h1></h1>
+//             <img src={animal.image} />
+//           </div>
+//           )
+//         })
+//       } */}
+//     </div>
   )
 }
 
