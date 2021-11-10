@@ -1,8 +1,6 @@
-import react from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Main({ animals, handleDelete }) {
+function Main({ animals }) {
   
   return (
     <div className="main-animals">
@@ -27,5 +25,4 @@ function Main({ animals, handleDelete }) {
 }
 
 export default Main
-// I want to wrap a link tag around each photo so that it's a clickalble link
-// That link should direct me to a show page based on that photo's id
+

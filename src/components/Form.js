@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Input from './Input.js';
 
@@ -21,6 +22,14 @@ function Form(props) {
   function handleSubmit(event){
     event.preventDefault();
     props.handleAdd(formState);
+    setFormState({
+      image:'',
+      name:'',
+      action: '',
+      diet: '',
+      temp: '',
+      location:''
+    })
   }
     return (
       <section className="container-new">
@@ -73,7 +82,9 @@ function Form(props) {
             value={formState.location}
             id="location"
           />
+          <a href='localhost:3000'>
         <input className="create" type="submit" value="Add Entry"/>
+        </a>
         </form>
       </section>
     );

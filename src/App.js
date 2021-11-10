@@ -6,7 +6,6 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Form from "./components/Form";
 // Import pages //
-// import Index from "./pages/Index";
 import Show from "./pages/Show";
 
 // API call function for animals
@@ -48,6 +47,24 @@ function App() {
       }
     }
   
+  // Update
+  async function handleUpdate(formInputs, animalId) {
+    try {
+      const animals = await fetch(`https://stormy-falls-16916.herokuapp.com/animals/${animalId}`, {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'Application/json',
+        },
+        body: JSON.stringify(formInputs),
+      }
+      ).then((res) => res.json());
+      setAnimals({ animals });
+      } catch (error) {
+        console.log(error)
+      }
+  }
+  
+  // Delete
   async function handleDelete(animalId) {
       console.log(animalId)
       try {
@@ -76,6 +93,7 @@ function App() {
               <Show
                 animals={animals.animals}
                 handleDelete={handleDelete}
+                handleUpdate={handleUpdate}
                 {...rp}
               />
             )}
