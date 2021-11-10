@@ -14,7 +14,13 @@
   font-family: "Rubik", sans-serif;
 }
 
+.jesse {
+  text-decoration: none;
+}
 
+.cna {
+  text-decoration: none;
+}
 
 .main-animals {
   display: flex;

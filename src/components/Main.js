@@ -6,7 +6,7 @@ function Main({ animals, handleDelete }) {
   
   return (
     <div className="main-animals">
-      <Link to="/animals">
+      <Link className="cna" to="/animals">
         <div>Create New Animal</div>
       </Link>
       {/*If animal is defined, display the animals  */}
