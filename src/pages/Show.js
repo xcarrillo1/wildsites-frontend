@@ -1,7 +1,7 @@
 import react from "react";
 import { useState } from "react";
 
-function Show({ animals, handleDelete, match }) {
+function Show({animals, handleDelete, match}) {
   const id = match.params.id
   const filteredAnimal = animals.filter(p => p.id == id)[0]
   return (
@@ -13,6 +13,13 @@ function Show({ animals, handleDelete, match }) {
      <p><b>Temperament:</b> {filteredAnimal.temp}</p>
      <p><b>Location:</b> {filteredAnimal.location}</p>
     <button onClick={() => handleDelete(filteredAnimal.id)} >X</button>
+    
+        
+      
+
+
+
+
   </div>
 //     <div>
 //       {/* {animals.map((animal) => {
