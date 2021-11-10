@@ -1,19 +1,18 @@
 import react from "react";
 import { useState } from "react";
 
-function Show(props, handleDelete) {
-  const id = props.match.params.id
-  const animals = props.animals
-  const animalX = animals.filter(p => p.id == id)[0]
+function Show({ animals, handleDelete, match }) {
+  const id = match.params.id
+  const filteredAnimal = animals.filter(p => p.id == id)[0]
   return (
   <div className="animalShow">
-     <img src={animalX.image} alt={animalX.name} />
-    <h1>{animalX.name}</h1>
-     <p><b>What to do:</b> {animalX.action}</p>
-     <p><b>Type:</b> {animalX.diet}</p>
-     <p><b>Temperament:</b> {animalX.temp}</p>
-     <p><b>Location:</b> {animalX.location}</p>
-      {/* <button onClick={() => handleDelete(animals.id)} >X</button> */}
+     <img src={filteredAnimal.image} alt={filteredAnimal.name} />
+    <h1>{filteredAnimal.name}</h1>
+     <p><b>What to do:</b> {filteredAnimal.action}</p>
+     <p><b>Type:</b> {filteredAnimal.diet}</p>
+     <p><b>Temperament:</b> {filteredAnimal.temp}</p>
+     <p><b>Location:</b> {filteredAnimal.location}</p>
+    <button onClick={() => handleDelete(filteredAnimal.id)} >X</button>
   </div>
 //     <div>
 //       {/* {animals.map((animal) => {
