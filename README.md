@@ -3,7 +3,7 @@
 Developers: Bobby S., Marlon S., Rodrigo B., Xavier C.
 
 ## Description:
-The app is a working full-stack application hosted on Netlify. The user will be able to create, edit, update or delete (Full CRUD data operations) wildlife that they encounter on different hiking trails. Users are also able to view wildlife that others have encountered.
+The app is a working full-stack application hosted on Netlify. The user is be able to create, edit, update or delete (Full CRUD data operations) wildlife that they encounter on different hiking trails. Users are also able to view wildlife that others have encountered.
 
 [Click here](https://github.com/xcarrillo1/backend-project4) to check the backend code!
 
